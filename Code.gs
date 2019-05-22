@@ -9,7 +9,7 @@ function replaceScoresWithNumberAndStar() {
     var rowNumberString = i.toString();
     var cellValue = currentSheet.getRange("R" + rowNumberString).getValue();
     
-    if (cellValue == 4 || cellValue == 5 || cellValue.toString() === "" || cellValue.indexOf("*") === -1) {
+    if (cellValue == 4 || cellValue == 5 || cellValue.toString() === "" || cellValue.toString().indexOf("*") !== -1) {
       
     } else {
       currentSheet.getRange("R" + rowNumberString).setValue(cellValue.toString() + "*");
